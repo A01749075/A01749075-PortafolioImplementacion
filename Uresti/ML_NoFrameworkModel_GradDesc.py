@@ -10,6 +10,7 @@ import seaborn as sns
 from sklearn.metrics import classification_report
 import matplotlib.pyplot as plt 
 
+
 # -------------------- CARGA DE DATOS -----------------------
 # Cargar dataset
 data = pd.read_csv("Student_Performance.csv")
@@ -27,11 +28,11 @@ data.fillna(data['Extracurricular Activities'].median(), inplace=True)
 
 
 # -------------------- DATA SPLIT ---------------------------
-# Split data into features and target
+# Split data en features y target
 X = data.drop("Performance Index", axis=1)
 y = data["Performance Index"]
 
-# Split data into training and testing sets sin usar sklearn
+# Split data en entrenamiento y prueba
 train_size = int(0.8 * len(X))
 X_train, X_test = X[:train_size], X[train_size:]
 y_train, y_test = y[:train_size], y[train_size:]
