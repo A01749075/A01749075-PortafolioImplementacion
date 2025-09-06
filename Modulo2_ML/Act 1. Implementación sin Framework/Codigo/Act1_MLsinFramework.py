@@ -17,7 +17,6 @@ from sklearn.metrics import classification_report
 
 # Cargar dataset
 data = pd.read_csv("Student_Performance.csv")
-data
 
 # Cambio de tipo de variables
 data['Extracurricular Activities'].unique()
@@ -192,7 +191,7 @@ def performance(y_true, y_pred):
 
 # Dataset Original
 X_train, X_test, y_train, y_test = split(data)
-print(X_train.shape, X_test.shape, y_train.shape, y_test.shape)
+#print(X_train.shape, X_test.shape, y_train.shape, y_test.shape)
 datos_train = pd.concat([X_train, y_train], axis=1)
 datos_test = pd.concat([X_test, y_test], axis=1)
 
@@ -232,7 +231,7 @@ performance(y_test, test_predictions)
 
 ### **Dataset submuestreo**
 X_train_sub, X_test_sub, y_train_sub, y_test_sub = split(sub_balanced_data)
-print(X_train_sub.shape, X_test_sub.shape, y_train_sub.shape, y_test_sub.shape)
+#print(X_train_sub.shape, X_test_sub.shape, y_train_sub.shape, y_test_sub.shape)
 datos_train_sub = pd.concat([X_train_sub, y_train_sub], axis=1)
 datos_test_sub = pd.concat([X_test_sub, y_test_sub], axis=1)
 
@@ -272,7 +271,7 @@ performance(y_test_sub, test_predictions)
 
 ### **Dataset sobremuestreo**
 X_train_sobre, X_test_sobre, y_train_sobre, y_test_sobre = split(sobre_balanced_data)
-print(X_train_sobre.shape, X_test_sobre.shape, y_train_sobre.shape, y_test_sobre.shape)
+#print(X_train_sobre.shape, X_test_sobre.shape, y_train_sobre.shape, y_test_sobre.shape)
 datos_train_sobre = pd.concat([X_train_sobre, y_train_sobre], axis=1)
 datos_test_sobre = pd.concat([X_test_sobre, y_test_sobre], axis=1)
 
