@@ -123,10 +123,11 @@ def split(data):
 def evaluate_model(X, w):
     """
     Train the model using gradient descent.
+    Feed forward from perceptron model.
     X: Training features
     w: Initial weights
     """
-    eval_xw = X * w
+    eval_xw = X * w # Feed forward
     predictions = np.sum(eval_xw, axis=1).round()
 
     for i in range(len(predictions)):
